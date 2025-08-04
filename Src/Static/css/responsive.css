@@ -1,0 +1,63 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+ 
+/* small mobile :320px. */
+/* @media (max-width: 767px) {
+.container {width: auto}
+ 
+} */
+
+/* Ensure black background and white text for mobile navbar */
+@media (max-width: 767px) {
+    .header-bottom {
+        background-color: #000 !important;
+    }
+
+    .main-menu nav ul#navigation > li > a,
+    .submenu li a {
+        color: white !important;
+    }
+
+    .submenu {
+        background-color: #000 !important;
+    }
+
+    .mobile_menu {
+        background-color: #000 !important;
+        color: white !important;
+    }
+
+    .mobile_menu ul li a {
+        color: white !important;
+    }
+
+    .sticky-logo img {
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+ 
+}

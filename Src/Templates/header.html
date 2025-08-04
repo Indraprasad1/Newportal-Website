@@ -1,0 +1,203 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>News HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="/Static/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/Static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Static/css/ticker-style.css">
+    <link rel="stylesheet" href="/Static/css/flaticon.css">
+    <link rel="stylesheet" href="/Static/css/slicknav.css">
+    <link rel="stylesheet" href="/Static/css/animate.min.css">
+    <link rel="stylesheet" href="/Static/css/magnific-popup.css">
+    <link rel="stylesheet" href="/Static/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/Static/css/themify-icons.css">
+    <link rel="stylesheet" href="/Static/css/slick.css">
+    <link rel="stylesheet" href="/Static/css/nice-select.css">
+    <link rel="stylesheet" href="/Static/css/style.css">
+    <link rel="stylesheet" href="/Static/css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header">
+
+                <!-- Top Navbar Area -->
+                    <div class="container-fluid text-center">
+                        <div class="row align-items-center">
+                            <!-- Left Text Date -->
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&font_color=333333&aj_time=yes&font_size=14&line_brake=1&api=211232p189" width="195" height="45"></iframe>
+                            </div>
+
+                            <!-- Mid Logo -->
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <div class="logo">
+                                    <a href="index.html"><img src="/Static/img/logo/kantipur.webp" alt="logo"
+                                            class="img-fluid" height="100" width="300"></a>
+                                </div>
+                            </div>
+
+                            <!-- Right Temp & Location -->
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <p class="mb-0"><span>&#x263C;</span> १९.२°C काठमांडौ</p>
+                                <p class="mb-0">काठमांडौमा वायुको गुणस्तर: <span class="text-danger">१८३</span></p>
+                            </div>
+
+                        </div>
+                    </div>
+                <!--Top Navbar Area End -->
+
+
+                <div class="header-bottom header-sticky rounded bg-dark">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 header-flex">
+                                <div class="logo">
+                                    <p>
+                                        <a href="#">
+                                          <span class="glyphicon glyphicon-user" style="background-color:white"></span>
+                                        </a>
+                                      </p>
+                                </div>
+
+                                <!-- sticky -->
+                                <div class="sticky-logo">
+                                    <a href="/homepage"><img src="/Static/img/logo/kantipur.webp" alt="logo" class="rounded" height="90"
+                                            width="250"></a>
+                                </div>
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-md-block">
+                                    <nav>
+                                        <ul id="navigation">
+            
+                                            <li ><a href="/login/" ><i class="fas fa-user" style="color:rgb(196, 172, 172); font-size: 16px;"></i></a></li>
+                                        
+                                            {% url 'homepage' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">Home</a></li>
+                                            
+                                            {% url 'category' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">Category</a></li>
+                                            
+                                            {% url 'about' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">About</a></li>
+
+                                            {% url 'latestnews' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">Latest News</a></li>
+                                            
+                                            {% url 'contact' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">Contact</a></li>
+                                            
+                                            <li><a href="#" style="color:white">Pages</a>
+                                                <ul class="submenu">
+                                                    
+                                                    {% url 'elements' as url %}
+                                                    <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} >Element</a></li>
+
+                                                    {% url 'blog' as url %}
+                                                    <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} >Blog</a></li>
+                                                    
+                                                    {% url 'blog_details' as url %}
+                                                    <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} >Blog Details</a></li>
+                                                    
+                                                    {% url 'detail' as url %}
+                                                    <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} >Categori Details</a></li>
+
+                                                </ul>
+                                            </li>
+                                            
+                                            {% url 'login' as url %}
+                                            <li class="{% if request.path == url %} active {% endif %}"><a href={{url}} style="color:white">Login</a></li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <i class="fas fa-search special-tag" style="color:white"></i>
+                                    <div class="search-box">
+                                        <form id="search-form">
+                                            <input type="text" name="alldata" id="search-input" placeholder="Search" autocomplete="off"/>
+                                            <div id="search-results" style="display: none;">
+                                                <!-- Results will appear here -->
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-md-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#search-input').on('input', function() {
+        var search_term = $(this).val();
+        if (search_term.length > 2) {  // Only search after 3 characters
+            $.ajax({
+                url: "{% url 'header' %}",
+                data: {
+                    'alldata': search_term
+                },
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                dataType: 'json',
+                success: function(data) {
+                    var results = $('#search-results');
+                    results.empty();
+                    
+                    if (data.length > 0) {
+                        results.show();
+                        $.each(data, function(index, item) {
+                            results.append(
+                                '<a href="/details/' + item.id + '" style="display: block; padding: 5px; color: black; background: white;">' + 
+                                item.title + '</a>'
+                            );
+                        });
+                    } else {
+                        results.hide();
+                    }
+                }
+            });
+        } else {
+            $('#search-results').hide();
+        }
+    });
+    
+    // Hide results when clicking elsewhere
+    $(document).click(function() {
+        $('#search-results').hide();
+    });
+    
+    // Prevent hiding when clicking on search elements
+    $('.search-box').click(function(e) {
+        e.stopPropagation();
+    });
+});
+</script>
+    </header>

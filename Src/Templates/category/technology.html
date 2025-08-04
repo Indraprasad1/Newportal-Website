@@ -1,0 +1,159 @@
+{% extends "Templates/base.html" %}
+    {% block content %}
+
+    <main>
+        <!-- Whats New Start -->
+        <section class="whats-news-area pt-50 pb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="section-tittle mb-30">
+                                        <h3>Whats New</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-md-9">
+                                    <div class="properties__button">
+                                        <!--Nav Button  -->
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                {% url 'category' as url %}
+                                                <a class=" nav-item nav-link" href="{{url}}">All</a>
+
+                                                {% url 'lifestyle' as url %}
+                                                <a class="nav-item nav-link" href="{{url}}" >Lifestyle</a>
+                                                
+                                                {% url 'travel' as url %}
+                                                <a class="nav-item nav-link" href="{{url}}" >Travel</a>
+
+                                                {% url 'fashion' as url %}
+                                                <a class="nav-item nav-link" href="{{url}}" >Fashion</a>
+                                                
+                                                {% url 'sports' as url %}
+                                                <a class="nav-item nav-link" href="{{url}}" >Sports</a>
+                                                
+                                                {% url 'technology' as url %}
+                                                <a class="nav-item nav-link active" href="{{url}}" >Technology</a>
+                                            </div>
+                                        </nav>
+                                        <!--End Nav Button  -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            <a style="color:white; background-color:#ffa53ae0; border-radius:10px;" class="lin1" href="#"> Tech News ></a>
+                            <div class="row mt-3 mb-2">
+                                <div style="background-color:#fff6f6e3;" class="col-md-12 col-lg-12">
+                                    <!-- Nav Card -->
+                                    {% for tech_data in news %}
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <!-- card one -->
+                                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                            aria-labelledby="nav-home-tab">
+                                            <div class="whats-news-caption">
+                                                <div class="row mt-2">
+                                                    
+                                                    <div class="col-md-12 d-flex">
+                                                        <img src="/Media/{{tech_data.image}}" alt="Protest" class="rounded" height="130px" width="140px">
+                                                        <div style="margin-left:20px;">
+                                                            <h4 class="two-line-limit" style="font_size:20px;"><a href="/details/{{tech_data.id}}"> 
+                                                             {{tech_data.title}}</h4>
+                                                            <p style="font-size:16px;" class="news-snippet">{{tech_data.sub_title}}</p>
+                                                            <span style="color:red;">{{tech_data.add_time}}</span>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        <!-- End Nav Card -->
+                    
+                    </div>
+
+                    <div class="col-lg-4">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-40">
+                            <h3>Follow Us</h3>
+                        </div>
+                        <!-- Flow Socail -->
+                        <div class="single-follow mb-45">
+                            <div class="single-box">
+                                <div class="follow-us d-flex align-items-center">
+                                    <div class="follow-social">
+                                        <a href="#"><img src="/Static/img/news/icon-fb.png" alt=""></a>
+                                    </div>
+                                    <div class="follow-count">
+                                        <span>8,045</span>
+                                        <p>Fans</p>
+                                    </div>
+                                </div>
+                                <div class="follow-us d-flex align-items-center">
+                                    <div class="follow-social">
+                                        <a href="#"><img src="/Static/img/news/icon-tw.png" alt=""></a>
+                                    </div>
+                                    <div class="follow-count">
+                                        <span>8,045</span>
+                                        <p>Fans</p>
+                                    </div>
+                                </div>
+                                <div class="follow-us d-flex align-items-center">
+                                    <div class="follow-social">
+                                        <a href="#"><img src="/Static/img/news/icon-ins.png" alt=""></a>
+                                    </div>
+                                    <div class="follow-count">
+                                        <span>8,045</span>
+                                        <p>Fans</p>
+                                    </div>
+                                </div>
+                                <div class="follow-us d-flex align-items-center">
+                                    <div class="follow-social">
+                                        <a href="#"><img src="/Static/img/news/icon-yo.png" alt=""></a>
+                                    </div>
+                                    <div class="follow-count">
+                                        <span>8,045</span>
+                                        <p>Fans</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- New Poster -->
+                        <div class="news-poster d-none d-lg-block">
+                            <img src="/Static/img/news/news_card.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Start pagination -->
+        <div class="pagination-area pb-45 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="single-wrap d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-start">
+                                    <li class="page-item"><a class="page-link" href="#"><span
+                                                class="flaticon-arrow roted"></span></a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><span
+                                                class="flaticon-arrow right-arrow"></span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End pagination  -->
+    </main>
+
+{% endblock %}
